@@ -1,0 +1,214 @@
+/*FONTS*/
+@font-face {
+  font-family: "MTNBrighterSans";
+  src: url("ttf/MTNBrighterSans-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular weight */
+}
+
+@font-face {
+  font-family: "MTNBrighterSans";
+  src: url("ttf/MTNBrighterSans-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium weight */
+}
+
+@font-face {
+  font-family: "MTNBrighterSans";
+  src: url("ttf/MTNBrighterSans-ExtraBold.ttf") format("truetype");
+  font-weight: 700; /* Extra weight */
+}
+/*=======================================================*/
+* {
+  font-family: "MTNBrighterSans", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*=======================================================*/
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/*=======================================================*/
+#content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+/*=======================================================*/
+#start-menu,
+#game-interface {
+  width: 100%;
+}
+/*=======================================================*/
+#start-menu {
+  text-align: center;
+}
+/*=======================================================*/
+h1,
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 0 12px;
+}
+/*=======================================================*/
+p {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+/*=======================================================*/
+span {
+  background-color: black;
+  color: #f0f0f0;
+  font-weight: 500;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+/*=======================================================*/
+.tip {
+  color: #000000;
+  margin: 15px;
+}
+/*=======================================================*/
+button {
+  background-color: black;
+  color: #f0f0f0;
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/*=======================================================*/
+#game-interface {
+  position: relative;
+  max-width: 500px;
+  max-height: 500px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*=======================================================*/
+#puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #ffffff;
+  border-radius: 20px;
+}
+/*=======================================================*/
+.puzzle-piece {
+  width: 100%;
+  height: 100%;
+  background-size: 300% 300%;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+/*=======================================================*/
+.puzzle-piece:hover {
+  transform: scale(1.05);
+}
+/*=======================================================*/
+.puzzle-piece.selected {
+  border: 5px solid #3dff03;
+  box-sizing: border-box;
+}
+/*=======================================================*/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+/*=======================================================*/
+.overlay-content {
+  background-color: rgba(255, 255, 255, 0.651);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+/*=======================================================*/
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  /*=======================================================*/
+  #content-wrapper {
+    max-width: 100%;
+  }
+  /*=======================================================*/
+  #game-interface {
+    width: 350px;
+    max-width: none;
+    border-radius: 25px;
+    margin-right: 6px;
+  }
+  /*=======================================================*/
+  #puzzle-container {
+    border-width: 5px;
+    border-radius: 10px;
+  }
+  /*=======================================================*/
+  .puzzle-piece {
+    border-radius: 5px;
+  }
+  /*=======================================================*/
+  h1 {
+    font-size: 2em;
+  }
+  /*=======================================================*/
+  h2 {
+    font-size: 1.8em;
+  }
+  /*=======================================================*/
+  button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+/*=======================================================*/
+@media screen and (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+  /*=======================================================*/
+  h1 {
+    font-size: 1.8em;
+  }
+  /*=======================================================*/
+  h2 {
+    font-size: 1.6em;
+  }
+  /*=======================================================*/
+  button {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+}
+/*=======================================================*/
